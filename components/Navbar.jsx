@@ -10,21 +10,23 @@ const Navbar = () => {
     { id: 4, url: "/blog", title: "Blog" },
   ];
   return (
-    <nav className="container mx-auto flex justify-between py-3 mt-5 items-center lora-font">
-      <div className="logo flex items-center">
-        <img src={Logo} className="w-[120px]" />
-        <Link to="/">HOME GARDEN</Link>
-      </div>
-      <div className="menu flex gap-5">
-        {navLinks.map((item) => {
-          return (
-            <NavLink key={item.id} to={item.url} className="px-3 py-">
-              {item.title}
-            </NavLink>
-          );
-        })}
-      </div>
-    </nav>
+    <div className="bg-blue-50">
+      <nav className="container mx-auto flex justify-between py-8  items-center lora-font">
+        <div className="logo flex items-center">
+          <img src={Logo} className="w-[120px]" />
+          <Link to="/">HOME GARDEN</Link>
+        </div>
+        <div className="menu flex gap-5">
+          {navLinks.map((item) => {
+            return (
+              <NavLink key={item.id} to={item.url} className="px-3 py-">
+                {item.title}
+              </NavLink>
+            );
+          })}
+        </div>
+      </nav>
+    </div>
   );
 };
 
