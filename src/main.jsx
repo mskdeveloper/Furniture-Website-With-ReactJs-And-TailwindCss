@@ -7,6 +7,7 @@ import Stores from "./Stores.jsx";
 import OurStory from "./OurStory.jsx";
 import Blog from "./Blog.jsx";
 import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -18,5 +19,6 @@ createRoot(document.getElementById("root")).render(
       <Route path="ourStory" element={<OurStory />} />
       <Route path="blog" element={<Blog />} />
     </Routes>
+    <Footer />
   </BrowserRouter>
 );
