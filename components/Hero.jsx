@@ -6,7 +6,7 @@ import heroRight2 from "/hero-right2.jpg";
 const Hero = () => {
   return (
     <div className="bg-blue-50">
-      <div className="container mx-auto pt-8 flex gap-3">
+      <div className="container mx-auto pt-8 flex flex-col md:flex-row gap-3">
         <div className="flex-1 px-5">
           <p className="font-medium text-gray-500">A beautifull house</p>
           <h1 className="font-bold text-7xl text-gray-800">Furniture.</h1>

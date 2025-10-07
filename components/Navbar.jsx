@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
 import Logo from "/logo.png";
+import { CiMenuBurger } from "react-icons/ci";
 
 const Navbar = () => {
   const navLinks = [
@@ -16,7 +17,7 @@ const Navbar = () => {
           <img src={Logo} className="w-[120px]" />
           <Link to="/">HOME GARDEN</Link>
         </div>
-        <div className="menu flex gap-5">
+        <div className="menu hidden md:flex gap-5">
           {navLinks.map((item) => {
             return (
               <NavLink key={item.id} to={item.url} className="px-3 py-">
@@ -24,6 +25,9 @@ const Navbar = () => {
               </NavLink>
             );
           })}
+        </div>
+        <div className="md:hidden text-2xl">
+          <CiMenuBurger />
         </div>
       </nav>
     </div>
